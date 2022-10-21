@@ -226,33 +226,25 @@
                                             <a class="nav-link" href="{{ route('SubCategoryList') }}">SubCategory List</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Trash Data</a>
+                                            <a class="nav-link" href="{{ route('TrashData') }}">Trash Data</a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                <a class="nav-link @yield('Products')" href="#" data-toggle="collapse" aria-expanded="false"
                                     data-target="#submenu-4" aria-controls="submenu-4"><i
-                                        class="fab fa-fw fa-wpforms"></i>Forms</a>
+                                        class="fab fa-fw fa-wpforms"></i>Products</a>
                                 <div id="submenu-4" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/form-elements.html">Form Elements</a>
+                                            <a class="nav-link" href="{{ route('AddProduct') }}">Add Product</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/form-validation.html">Parsely
-                                                Validations</a>
+                                            <a class="nav-link" href="{{ route('ProductList') }}">Products List</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/multiselect.html">Multiselect</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/datepicker.html">Date Picker</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="pages/bootstrap-select.html">Bootstrap
-                                                Select</a>
+                                            <a class="nav-link" href="{{ route('TrashProduct') }}">Trash Products</a>
                                         </li>
                                     </ul>
                                 </div>

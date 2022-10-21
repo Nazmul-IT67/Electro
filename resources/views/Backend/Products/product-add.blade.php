@@ -1,5 +1,5 @@
 @extends('Dashboard.master')
-@section('SubCategory')
+@section('Products')
     active
 @endsection
 @section('content')
@@ -29,16 +29,14 @@
                             <div class="card">
                                 <h5 class="card-header">SubCategory Table</h5>
                                 <div class="card-body">
-                                    <form action="{{ route('UpdateData') }}" method="POST">
+                                    <form action="{{ route('SubCategoryPost') }}" method="POST">
                                         @csrf
-                                        <input type="hidden" name="subcategory_id" value="{{ $subcategory->id }}">
                                         <div class="form-group">
                                             <label for="category_id">Category Name</label>
                                             <select name="category_id" id="category_id" class="form-control @error('category_id') is-invalid @enderror form-selec" aria-label=".form-select-lg example">
                                                 <option value="">---Select Category---</option>
                                                 @foreach ($category as $data)
-                                                <option @if ($subcategory->category_id == $data->id)selected
-                                                    @endif value="{{ $data->id }}">{{ $data->category_name }}</option>
+                                                    <option value="{{ $data->id }}">{{ $data->category_name }}</option>
                                                 @endforeach
                                             </select>
                                             @error('category_id')
@@ -48,7 +46,7 @@
 
                                         <div class="form-group">
                                             <label for="subcategory_name">Category Name</label>
-                                            <input id="subcategory_name" type="text" name="subcategory_name" placeholder="Enter category name" class="form-control @error('subcategory_name') is-invalid @enderror" value="{{ $subcategory->subcategory_name ?? old('subcategory_name') }}">
+                                            <input id="subcategory_name" type="text" name="subcategory_name" placeholder="Enter category name" class="form-control @error('subcategory_name') is-invalid @enderror" value="{{ old('subcategory_name') }}">
                                             @error('subcategory_name')
                                                 <div class="alert alert-danger">{{ $message }}</div>
                                             @enderror
@@ -65,7 +63,7 @@
                                             </div>
                                             <div class="col-sm-6 pl-0">
                                                 <p class="text-right">
-                                                    <button type="submit" class="btn btn-space btn-primary">Update</button>
+                                                    <button type="submit" class="btn btn-space btn-primary">Submit</button>
                                                     <button class="btn btn-space btn-secondary">Cancel</button>
                                                 </p>
                                             </div>

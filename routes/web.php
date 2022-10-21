@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SubCategoryController;
+use App\Http\Controllers\ProductsController;
 
 /*
 | Web Routes
@@ -41,3 +42,10 @@ Route::get('subcategory-list', [SubCategoryController::class, 'SubCategoryList']
 Route::get('subcategory-edit/{id}', [SubCategoryController::class, 'SubCategoryEdit'])->name('SubCategoryEdit');
 Route::POST('update-data', [SubCategoryController::class, 'UpdateData'])->name('UpdateData');
 Route::get('subcategory-delete/{id}', [SubCategoryController::class, 'SubCategoryDelete'])->name('SubCategoryDelete');
+Route::get('trash-data', [SubCategoryController::class, 'TrashData'])->name('TrashData');
+Route::get('undo-data/{id}', [SubCategoryController::class, 'UndoData'])->name('UndoData');
+Route::get('delete-data/{id}', [SubCategoryController::class, 'DeleteData'])->name('DeleteData');
+//----------------------------------------------------------------------------------------------//
+Route::get('product-add', [ProductsController::class, 'AddProduct'])->name('AddProduct');
+Route::get('product-list', [ProductsController::class, 'ProductList'])->name('ProductList');
+Route::get('trash-product', [ProductsController::class, 'TrashProduct'])->name('TrashProduct');
