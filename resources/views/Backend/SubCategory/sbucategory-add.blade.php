@@ -27,7 +27,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <h5 class="card-header">SubCategory Table</h5>
+                                <h5 class="card-header">SubCategory</h5>
                                 <div class="card-body">
                                     <form action="{{ route('SubCategoryPost') }}" method="POST">
                                         @csrf
