@@ -47,5 +47,7 @@ Route::get('undo-data/{id}', [SubCategoryController::class, 'UndoData'])->name('
 Route::get('delete-data/{id}', [SubCategoryController::class, 'DeleteData'])->name('DeleteData');
 //----------------------------------------------------------------------------------------------//
 Route::get('product-add', [ProductsController::class, 'AddProduct'])->name('AddProduct');
+Route::get('product-insert', [ProductsController::class, 'InsertProduct'])->name('InsertProduct');
 Route::get('product-list', [ProductsController::class, 'ProductList'])->name('ProductList');
 Route::get('trash-product', [ProductsController::class, 'TrashProduct'])->name('TrashProduct');
+Route::get('sub-cat/{id}', [ProductsController::class, 'SubCat'])->name('SubCat');
